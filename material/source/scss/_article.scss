@@ -1,0 +1,38 @@
+.article {
+  a:not(.btn) {
+    &:hover, &:focus {
+      outline: none;
+      color: $primary-color-dark;
+    }
+  }
+}
+
+.article-meta {
+  font-size: 14px;
+  font-family: GillSans, Calibri, Trebuchet, sans-serif;
+  font-weight: 300;
+  margin-top: 0.3rem;
+  .material-icons {
+    font-size: 17px;
+  }
+  time {
+    color: #757575;
+  }
+}
+
+.article-header {
+  h3 {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+.excerpt {
+  @media #{$medium-and-up} {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .article-inner {
+    margin-top: 0.6rem;
+  }
+}

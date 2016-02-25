@@ -1,0 +1,10 @@
+<% if (post.categories && post.categories.length){ %>
+<div class="breadcrumb valign-wrapper">
+  <%- list_categories(post.categories, {
+    show_count: false,
+    class: "breadcrumb",
+    style: "",
+    separator: "<i class=\"material-icons\">chevron_right</i>"
+  }) %>
+</div>
+<% } %>

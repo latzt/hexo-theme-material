@@ -1,0 +1,14 @@
+<% if (post.prev || post.next){ %>
+<div class="article-post-nav">
+  <div class="row">
+    <div class="col s12">
+      <% if (post.prev){ %>
+        <a class="tooltipped" rel="prev" data-position="right" data-delay="50" data-tooltip="<%= post.prev.title %>" href="<%- url_for(post.prev.path) %>"><i class="material-icons">chevron_left</i></a>
+      <% } %>
+      <% if (post.next){ %>
+        <a class="right tooltipped" rel="next" data-position="left" data-delay="50" data-tooltip="<%= post.next.title %>" href="<%- url_for(post.next.path) %>"><i class="material-icons">chevron_right</i></a>
+      <% } %>
+    </div>
+  </div>
+</div>
+<% } %>

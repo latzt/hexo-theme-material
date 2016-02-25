@@ -1,0 +1,72 @@
+@import "//fonts.googleapis.com/icon?family=Material+Icons";
+@import "../bower_components/Materialize/sass/materialize";
+
+@import "_typography";
+@import "_article";
+
+
+// all block elements in a post...
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// reset materialize
+// i dislike to have global margin on rows
+.row { margin-bottom: 0; }
+
+.no-gap { margin: 0; padding: 0; }
+
+.section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  ~ .section {
+    padding-top: 0;
+  }
+}
+
+.footer,
+.article-post-nav {
+  margin-top: 4rem;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+  .section {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+}
+
+.paginator {
+  .extend,
+  .page-number {
+    display: inline-block;
+    padding: 0 10px;
+    line-height: 30px;
+    text-align: center;
+    &.current {
+      background-color: $primary-color;
+      color: #fff;
+      margin-right: 5px;
+      &:not(:first-child) {
+        margin-left: 5px;
+      }
+    }
+  }
+  .extend {
+    line-height: 1;
+  }
+}

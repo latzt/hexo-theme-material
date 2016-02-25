@@ -1,0 +1,24 @@
+# Header
+menu:
+  Archiv: /archives
+
+
+# Footer Text
+footer_claim: Have A Nice Day :)
+
+# Slider
+slider_fullscreen: false
+
+# Content
+excerpt_link: Read More
+
+# Miscellaneous
+favicon: /favicon.png
+rss: /atom.xml
+
+# Social *cough* 'spies'
+google_analytics:
+twitter:
+google_plus:
+fb_admins:
+fb_app_id:

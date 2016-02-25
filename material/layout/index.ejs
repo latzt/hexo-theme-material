@@ -1,0 +1,5 @@
+<% page.posts.each(function(post){ %>
+  <div class="section">
+    <%- partial('_partial/article-excerpt', {post: post}) %>
+  </div>
+<% }) %>

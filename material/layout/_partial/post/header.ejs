@@ -1,0 +1,15 @@
+<header class="row article-header <% if (!link) { %>section<% } %>">
+  <div class="col s12">
+    <% if (link) { %>
+      <h3 itemprop="name" class="no-gap">
+        <a href="<%- url_for(post.path) %>" itemprop="url"><%= post.title %></a>
+      </h3>
+    <% } else { %>
+      <h1 itemprop="name" class="no-gap"><%= post.title %></a></h1>
+    <% } %>
+    <div class="article-meta">
+      <%- partial('time') %>
+      <%- partial('tag') %>
+    </div>
+  </div>
+</header>

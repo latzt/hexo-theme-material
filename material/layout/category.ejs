@@ -1,0 +1,8 @@
+<div class="section">
+  <h1 class="no-gap"><small>category</small>&nbsp;/&nbsp;<%= page.category %></h1>
+</div>
+<% page.posts.each(function(post){ %>
+  <div class="section">
+    <%- partial('_partial/article-excerpt', {post: post}) %>
+  </div>
+<% }) %>

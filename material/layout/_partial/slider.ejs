@@ -1,0 +1,20 @@
+<% if (post.slider && post.slider.length){ %>
+  <div class="slider <% if (theme.slider_fullscreen) { %>fullscreen<% } %>">
+    <ul class="slides">
+
+      <% post.slider.forEach(function(photo, i){ %>
+
+        <li>
+          <% if (config.post_asset_folder == true) { %>
+            <img src="<%- relative_url('', photo) %>" itemprop="image">
+          <% } else { %>
+            <img src="<%- url_for(photo) %>" itemprop="image">
+          <% } %>
+        </li>
+
+      <% }) %>
+
+    </ul>
+  </div>
+
+<% } %>

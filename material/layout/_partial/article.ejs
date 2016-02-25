@@ -1,0 +1,23 @@
+<article class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
+  <%- partial('post/header', {link: false}) %>
+  <div class="article-inner">
+    <div class="article-entry" itemprop="articleBody">
+      <%- post.content %>
+    </div>
+    <% if (post.comments && config.disqus_shortname){ %>
+      <footer class="article-footer">
+        <a href="<%= post.permalink %>#disqus_thread" class="article-comment-link">Comment</a>
+      </footer>
+    <% } %>
+  </div>
+</article>
+
+<%- partial('post/nav') %>
+
+<% if (post.comments && config.disqus_shortname){ %>
+<section id="comments" class="article-comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+<% } %>

@@ -1,0 +1,15 @@
+<article class="article article-type-<%= post.layout %> excerpt" itemscope itemprop="blogPost">
+  <%- partial('post/header', {link: true}) %>
+  <div class="article-inner">
+    <% if (post.excerpt) { %>
+      <div class="article-entry" itemprop="articleBody">
+        <%- post.excerpt %>
+      </div>
+    <% } %>
+  </div>
+  <div class="article-meta">
+    <a class="article-more-link valign-wrapper" href="<%- url_for(post.path) %>#more" title="">
+      <%= theme.excerpt_link %> <i class="material-icons">chevron_right</i>
+    </a>
+  </div>
+</article>
